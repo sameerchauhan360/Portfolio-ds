@@ -1,0 +1,504 @@
+/* General Styles */
+html, body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    overflow-x: hidden; /* Prevent horizontal scrolling */
+    scroll-behavior: smooth;
+}
+
+* {
+    box-sizing: border-box; /* Include padding and border in the total width and height */
+}
+
+header {
+    background-color: #333;
+    padding: 10px 0;
+    text-align: center; /* Center the text in the header */
+    position: sticky; /* Change from relative to sticky */
+    top: 0; /* Stick to the top */
+    z-index: 1; /* Ensure it's always on top */
+}
+
+.header-content {
+    display: flex;
+    justify-content: center; /* Center content horizontally */
+    align-items: center;
+    padding: 0 20px;
+    width: 100%; /* Take full width for centering */
+}
+
+.logo {
+    color: white;
+    font-size: 24px;
+    text-align: center; /* Center text within the logo */
+    flex-grow: 1; /* Allow the logo to take up space to center */
+}
+
+.menu-toggle {
+    font-size: 30px;
+    color: white;
+    cursor: pointer;
+    display: none; /* Hidden by default */
+    position: absolute;
+    right: 20px;
+    top: 15px;
+}
+
+nav {
+    overflow: hidden;
+    transition: height 0.4s ease;
+    background-color: #333;
+    width: 100%;
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+/* Intro section styles */
+.intro-section {
+    height: 100vh;
+    background-color: #f4f4f4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    width: 100vw; /* Ensure it does not exceed the viewport width */
+    overflow: hidden; /* Prevent overflow */
+}
+
+.intro-container {
+    text-align: center;
+}
+
+.intro-container h1 {
+    font-size: 48px;
+    margin: 0;
+}
+
+.intro-container p {
+    font-size: 24px;
+    margin: 10px 0;
+    color: #666;
+}
+
+.cta-button {
+    padding: 10px 20px;
+    background-color: #333;
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    border-radius: 5px;
+    margin-top: 20px;
+    display: inline-block;
+}
+
+.cta-button:hover {
+    background-color: #555;
+}
+
+/* Media Queries */
+
+/* For tablets and smaller screens */
+@media (max-width: 768px) {
+    .menu-toggle {
+        display: block; /* Show hamburger icon */
+    }
+
+    nav {
+        height: 0;
+        overflow: hidden;
+    }
+
+    .nav-open {
+        height: auto; /* Adjust based on content's height */
+    }
+
+    nav ul {
+        flex-direction: column; /* Stack the navigation links vertically */
+        padding: 0; /* Remove padding from ul */
+        margin: 0; /* Remove margin from ul */
+    }
+
+    nav ul li {
+        text-align: center;
+        margin: 10px 0; /* Add space between the links */
+    }
+
+    nav ul li a {
+        font-size: 20px;
+        display: block;
+        padding: 10px 0;
+    }
+}
+
+/* For mobile phones */
+@media (max-width: 480px) {
+    .intro-container h1 {
+        font-size: 28px;
+    }
+    
+    .intro-container p {
+        font-size: 18px;
+    }
+
+    .cta-button {
+        font-size: 16px;
+        padding: 8px 16px;
+    }
+}
+/*-------------------about------------------*/
+/* About Section */
+/* About Section */
+#about {
+    background-color: #f9f9f9; /* Light background */
+    padding: 20px; /* Padding inside the section */
+    margin: 20px 0; /* Space above and below the section */
+    border-radius: 8px; /* Rounded corners */
+    display: flex; /* Use flexbox to center content */
+    flex-direction: column; /* Stack children vertically */
+    justify-content: center; /* Center vertically */
+    align-items: center; /* Center horizontally */
+}
+
+/* About Content */
+.about-content {
+    width: 100%; /* Full width for small displays */
+    padding: 0 15px; /* Add some horizontal padding */
+    max-width: 800px; /* Limit max width for larger displays */
+    text-align: center; /* Center text */
+}
+
+/* Responsive Design */
+@media (max-width: 576px) {
+    .about-content {
+        max-width: 100%; /* Full width for extra small screens */
+    }
+}
+
+@media (min-width: 576px) and (max-width: 768px) {
+    .about-content {
+        max-width: 90%; /* 90% width for small screens */
+    }
+}
+
+@media (min-width: 768px) {
+    .about-content {
+        max-width: 70%; /* 70% width for medium screens */
+    }
+}
+
+/* Heading Style */
+h2 {
+    text-align: center; /* Center the heading */
+}
+
+/* Portfolio Buttons */
+.portfolio-buttons {
+    text-align: center; /* Center the buttons */
+    margin-top: 20px; /* Space above the buttons */
+}
+
+/* Button Styles */
+.button {
+    display: inline-block; /* Align buttons next to each other */
+    padding: 12px 25px; /* Space inside the button */
+    margin: 10px; /* Space between buttons */
+    font-size: 16px; /* Font size */
+    font-family: Arial, sans-serif; /* Font family */
+    font-weight: bold; /* Font weight */
+    border: 2px solid currentColor; /* Border color matches text color */
+    border-radius: 5px; /* Rounded corners */
+    cursor: pointer; /* Pointer cursor on hover */
+    transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease; /* Smooth hover transition */
+    color: #333; /* Default text color for monochrome */
+    background-color: transparent; /* Default background for monochrome */
+}
+
+/* Primary and Resume Button Styles */
+.contact-button {
+    color: #666; /* Gray color for primary button */
+}
+
+.resume-button {
+    color: #999; /* Lighter gray color for secondary button */
+}
+
+/* Hover Effects */
+.button:hover {
+    transform: translateY(-2px); /* Lift effect */
+}
+
+.contact-button:hover {
+    background-color: #666; /* Darker shade for primary button on hover */
+    color: white; /* Change text color on hover */
+}
+
+.resume-button:hover {
+    background-color: #999; /* Darker shade for secondary button on hover */
+    color: white; /* Change text color on hover */
+}
+
+/* Media Queries for Desktop Layout */
+@media (min-width: 768px) {
+    /* Adjust the padding of the about section for desktop */
+    #about {
+        padding: 40px; /* Increased padding for better spacing on larger screens */
+    }
+}
+
+/*-----------------projects---------------------*/
+.projects-section {
+    padding: 15px 20px;
+    background-color: #f4f4f4;
+    text-align: center;
+}
+
+.projects-section h2 {
+    font-size: 36px;
+    margin-bottom: 30px;
+}
+
+.project-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap; /* Allow cards to wrap */
+    gap: 20px; /* Space between cards */
+}
+
+.project-card {
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 20px;
+    width: 250px; /* Set a fixed width for cards */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s; /* Smooth hover effect */
+}
+
+.project-card:hover {
+    transform: translateY(-5px); /* Slight lift on hover */
+}
+
+.project-card h3 {
+    font-size: 20px;
+    margin: 10px 0;
+}
+
+.project-card p {
+    font-size: 16px;
+    color: #666;
+}
+
+.project-button {
+    display: inline-block;
+    margin-top: 15px;
+    padding: 10px 15px;
+    background-color: #333;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.project-button:hover {
+    background-color: #555;
+}
+
+
+/*--------------------skills--------------------*/
+/* Skills Section Styles */
+.skills-section {
+    background-color: #ffffff; /* Background color for the skills section */
+    padding: 40px 20px; /* Padding around the section */
+    text-align: center; /* Center the text in the section */
+}
+
+.skills-container {
+    display: flex;
+    flex-wrap: wrap; /* Allow skills to wrap onto the next line */
+    justify-content: center; /* Center the skills section */
+}
+
+/* Skill box styles */
+.skill-box {
+    background-color: #f4f4f4; /* Light background */
+    border: 1px solid #ccc; /* Light border */
+    border-radius: 8px; /* Rounded corners */
+    padding: 20px; /* Padding inside the box */
+    margin: 10px; /* Space between boxes */
+    text-align: center; /* Center the text */
+    transition: transform 0.3s ease; /* Smooth scaling effect */
+    width: 150px; /* Fixed width for each skill box */
+}
+
+/* Hover effect */
+.skill-box:hover {
+    transform: scale(1.05); /* Scale up on hover */
+}
+
+/* Skill title styles */
+.skill-box h3 {
+    font-size: 18px; /* Font size for skill titles */
+    margin: 0; /* Remove default margin */
+}
+
+/* Media Queries */
+
+/* For mobile phones */
+@media (max-width: 480px) {
+    .skill-box {
+        width: calc(50% - 20px); /* Two boxes in a row with a margin */
+    }
+}
+
+
+/*------------------skills-------------+-------*/
+.experience-section {
+    background-color: #f4f4f4;
+    padding: 50px 15px; /* Add padding for better spacing */
+    text-align: center; /* Center the heading */
+}
+
+.experience-section h2 {
+    font-size: 36px; /* Adjust the font size for the heading */
+    margin-bottom: 30px; /* Space below the heading */
+    color: #333; /* Color for the heading */
+}
+
+.experience-container {
+    display: flex; /* Use flexbox for layout */
+    justify-content: center; /* Center the content */
+    align-items: flex-start; /* Align items to the start */
+    border: 2px solid #333; /* Outer box border */
+    border-radius: 10px; /* Rounded corners */
+    padding: 20px; /* Inner padding */
+    transition: transform 0.3s, box-shadow 0.3s; /* Smooth transition for hover effects */
+}
+
+.experience-container:hover {
+    transform: scale(1.02); /* Slightly scale up on hover */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2); /* Add shadow on hover */
+}
+
+.experience-left {
+    flex: 0 0 30%; /* Set the left side to 30% width */
+    text-align: center; /* Center the text */
+}
+
+.duration {
+    font-size: 16px; /* Font size for duration */
+    color: #666; /* Color for duration */
+    margin-bottom: 10px; /* Space below the duration */
+}
+
+.company-name {
+    font-size: 20px; /* Font size for the company name */
+    color: #333; /* Color for the company name */
+}
+
+.experience-right {
+    flex: 0 0 70%; /* Set the right side to 70% width */
+    text-align: left; /* Align text to the left */
+    padding-left: 20px; /* Space between left and right sections */
+}
+
+.experience-right h3 {
+    font-size: 24px; /* Font size for the internship title */
+    margin-bottom: 10px; /* Space below the title */
+    color: #333; /* Color for the title */
+}
+
+.experience-right p {
+    font-size: 16px; /* Font size for the description text */
+    color: #666; /* Color for the description */
+    margin: 5px 0; /* Space between paragraphs */
+}
+
+/* Media Query for Mobile Devices */
+@media (max-width: 768px) {
+    .experience-container {
+        flex-direction: column; /* Stack items vertically */
+        align-items: center; /* Center items horizontally */
+    }
+
+    .experience-left {
+        text-align: center; /* Center the text on mobile */
+        margin-bottom: 20px; /* Add space below for separation */
+    }
+
+    .experience-right {
+        padding-left: 0; /* Remove left padding for mobile */
+        text-align: center; /* Center the text for mobile */
+    }
+
+    .experience-right h3 {
+        font-size: 20px; /* Adjust font size for mobile */
+    }
+
+    .experience-right p {
+        font-size: 14px; /* Adjust font size for mobile */
+    }
+}
+
+
+/*------------------------footer-----------------------*/
+/* Footer Styles */
+/* Footer Styles */
+footer {
+    background-color: #333; /* Change this to match your monochrome theme */
+    color: white; /* Text color */
+    padding: 20px; /* Padding for footer content */
+    text-align: center; /* Center the text */
+    margin: 0; /* Remove margin */
+    position: relative; /* Positioning to allow for any potential positioning later */
+}
+
+.footer-content {
+    max-width: 1200px; /* Max width to keep content centered */
+    margin: 0 auto; /* Center the content */
+    padding: 0; /* Remove padding */
+}
+
+.footer-content h4 {
+    margin: 0; /* Remove any margin around the heading */
+    font-size: 24px; /* Adjust font size as needed */
+}
+
+.social-icons {
+    list-style: none; /* Remove default list styling */
+    padding: 0; /* Remove padding */
+    margin: 0; /* Remove margin */
+    display: flex; /* Use flexbox for layout */
+    justify-content: center; /* Center the icons */
+}
+
+.social-icons li {
+    margin: 0 10px; /* Space between icons */
+}
+
+.social-icons a {
+    color: white; /* Icon color */
+    text-decoration: none; /* Remove underline from links */
+    font-size: 20px; /* Adjust size of icons */
+    transition: color 0.3s ease; /* Smooth transition for hover effect */
+}
+
+.social-icons a:hover {
+    color: #f4f4f4; /* Change color on hover */
+}
